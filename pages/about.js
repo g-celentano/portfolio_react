@@ -3,7 +3,8 @@ import {
   Image,
   Text,
   useColorModeValue,
-  Heading
+  Heading,
+  Box
 } from '@chakra-ui/react'
 import AnimatedText from '../components/animated_text.js'
 import { useEffect, useState } from 'react'
@@ -13,21 +14,20 @@ const About = () => {
   const [cardTextHeight, setCardTextHeight] = useState(0)
   const [cardTextOpacity, setCardTextOpacity] = useState(0)
   const [moreTextOpacity, setMoreTextOpacity] = useState(0.0)
+  const [bioOpacity, setBioOpacity] = useState(0.0)
 
   const listenToScroll = () => {
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop
     const moreText = document.querySelector('#moreText')
     if (moreText) {
-      const newOpacity =
-        0.2 +
-        ((1 - 0.2) /
-          ((document.body.offsetHeight ||
-            document.documentElement.offsetHeight) -
-            moreText.offsetHeight)) * // study new value here for "just text" opacity
-          (winScroll - 0.2)
-      console.log(newOpacity)
-      setMoreTextOpacity(newOpacity)
+      const moreOpacity = 0.2 + ((1 - 0.2) / moreText.offsetHeight) * winScroll
+      setMoreTextOpacity(moreOpacity)
+    }
+    const bio = document.querySelector('#bio')
+    if (bio) {
+      const bioOpacity = 0.2 + ((1 - 0.2) / bio.offsetHeight) * winScroll
+      setBioOpacity(bioOpacity)
     }
   }
 
@@ -40,10 +40,10 @@ const About = () => {
       setTimeout(() => {
         setCardTextOpacity(1)
         setMoreTextOpacity(0.2)
+        window.addEventListener('scroll', listenToScroll)
+        return () => window.removeEventListener('scroll', listenToScroll)
       }, 200)
     }, 2700)
-    window.addEventListener('scroll', listenToScroll)
-    return () => window.removeEventListener('scroll', listenToScroll)
   }, [])
 
   return (
@@ -136,13 +136,63 @@ const About = () => {
         </Text>
       </Container>
       <Container
+        id="bio"
         maxW="container.lg"
         marginTop={20}
         gap={10}
         opacity={moreTextOpacity}
         transition="opacity 0.05s ease-in"
+        fontSize={{
+          md: '18px',
+          sm: '16px',
+          base: '12px'
+        }}
       >
-        <Heading variant="title">Bio</Heading>
+        <Heading variant="title" maxW="full" textAlign="left">
+          Bio
+        </Heading>
+        <Box
+          display="flex"
+          flexDir="row"
+          alignItems="center"
+          justifyContent="flex-start"
+          gap={4}
+        >
+          <Text variant="bioYear">1999</Text>
+          <Text> Born in Naples - IT</Text>
+        </Box>
+        <Box
+          display="flex"
+          flexDir="row"
+          alignItems="center"
+          justifyContent="flex-start"
+          gap={4}
+        >
+          <Text variant="bioYear">2018</Text>
+          <Text>High school graduate as a computer technician</Text>
+        </Box>
+        <Box
+          display="flex"
+          flexDir="row"
+          alignItems="center"
+          justifyContent="flex-start"
+          gap={4}
+        >
+          <Text variant="bioYear">2023</Text>
+          <Text>Bachelor degree as IT Engineer</Text>
+        </Box>
+        <Box
+          display="flex"
+          flexDir="row"
+          alignItems="center"
+          justifyContent="flex-start"
+          gap={4}
+        >
+          <Text variant="bioYear">2022-23</Text>
+          <Text>
+            Student @ Apple Developer Academy&lt;Unina Federico II&gt;
+          </Text>
+        </Box>
       </Container>
     </Container>
   )
