@@ -1,9 +1,10 @@
-import { Box, Container, Link } from '@chakra-ui/react'
+import { Box, Container, Link, grid } from '@chakra-ui/react'
+import About from './about.js'
 
 const Page = () => {
   return (
-    <Container>
-      <Box borderRadius="lg" bg="tomato" p={3} mb={6}>
+    <Container maxW="full" minH="75dvh" display="grid" placeItems="center">
+      {/* <Box borderRadius="lg" bg="tomato" p={3} mb={6}>
         <Link
           href="https://youtu.be/bSMZgXzC9AA?t=2053"
           bg="red"
@@ -14,7 +15,8 @@ const Page = () => {
         >
           DevAsLife tutorial
         </Link>
-      </Box>
+      </Box> */}
+      <About />
     </Container>
   )
 }

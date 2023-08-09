@@ -90,9 +90,6 @@ const Navbar = props => {
         marginLeft={5}
       >
         <LinkItem href="/" path={path}>
-          Home
-        </LinkItem>
-        <LinkItem href="/about" path={path}>
           About
         </LinkItem>
         <LinkItem href="/works" path={path}>
@@ -116,9 +113,6 @@ const Navbar = props => {
             />
             <MenuList>
               <Link as={NextLink} href="/" passHref>
-                <MenuItem>Home</MenuItem>
-              </Link>
-              <Link as={NextLink} href="/about" passHref>
                 <MenuItem>About</MenuItem>
               </Link>
               <Link as={NextLink} href="/works" passHref>

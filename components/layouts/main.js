@@ -10,7 +10,13 @@ const Main = ({ children, router }) => {
         <title>Gaetano Celentano - Homepage</title>
       </Head>
       <Navbar path={router.asPath} />
-      <Container maxW="full" pt={14}>
+      <Container
+        maxW="full"
+        pt={{
+          md: 20,
+          base: 16
+        }}
+      >
         {children}
       </Container>
     </Box>
