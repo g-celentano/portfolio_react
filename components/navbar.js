@@ -95,21 +95,25 @@ const Navbar = props => {
         <LinkItem href="/works" path={path}>
           Works
         </LinkItem>
-        <LinkItem href="/contacts" path={path}>
-          Contacts
-        </LinkItem>
       </Stack>
 
-      <Box flex={1} align="right">
+      <Box flex={1} align="right" mr={1}>
         <ThemeToggleButton />
-        <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+        <Box display={{ base: 'block', sm: 'inline-block', md: 'none' }}>
           <Menu>
             <MenuButton
               as={IconButton}
               icon={<HamburgerIcon />}
               variant="outline"
               aria-label="Options"
-              marginRight={2}
+              marginInline={{
+                base: 0,
+                sm: 1
+              }}
+              marginBlock={{
+                base: 1,
+                sm: 2
+              }}
             />
             <MenuList>
               <Link as={NextLink} href="/" passHref>
@@ -117,9 +121,6 @@ const Navbar = props => {
               </Link>
               <Link as={NextLink} href="/works" passHref>
                 <MenuItem>Works</MenuItem>
-              </Link>
-              <Link as={NextLink} href="/contacts" passHref>
-                <MenuItem>Contacts</MenuItem>
               </Link>
             </MenuList>
           </Menu>

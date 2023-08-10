@@ -4,13 +4,19 @@ import {
   Text,
   useColorModeValue,
   Heading,
-  Box
+  Flex,
+  Link,
+  Icon
 } from '@chakra-ui/react'
 import AnimatedText from '../components/animated_text.js'
 import { useEffect, useState } from 'react'
+import { TiContacts } from 'react-icons/ti'
 
 const About = () => {
-  const [cardWidth, setCardWidth] = useState('xl')
+  const [cardWidth, setCardWidth] = useState({
+    md: 'xl',
+    base: 'md'
+  })
   const [cardTextHeight, setCardTextHeight] = useState(0)
   const [cardTextOpacity, setCardTextOpacity] = useState(0)
   const [moreTextOpacity, setMoreTextOpacity] = useState(0.0)
@@ -26,20 +32,26 @@ const About = () => {
     }
     const bio = document.querySelector('#bio')
     if (bio) {
-      const bioOpacity = 0.2 + ((1 - 0.2) / bio.offsetHeight) * winScroll
+      const bioOpacity =
+        0.2 +
+        ((1 - 0.2) / (bio.offsetHeight + moreText.offsetHeight / 2)) * winScroll
       setBioOpacity(bioOpacity)
     }
   }
 
   useEffect(() => {
     setTimeout(() => {
-      setCardWidth('container.md')
+      setCardWidth({
+        md: 'container.md',
+        base: 'container.sm'
+      })
     }, 2400)
     setTimeout(() => {
       setCardTextHeight(1000)
       setTimeout(() => {
         setCardTextOpacity(1)
         setMoreTextOpacity(0.2)
+        setBioOpacity(0.2)
         window.addEventListener('scroll', listenToScroll)
         return () => window.removeEventListener('scroll', listenToScroll)
       }, 200)
@@ -48,6 +60,7 @@ const About = () => {
 
   return (
     <Container maxW="full">
+      {/* //!WELCOME CONTAINER */}
       <Container
         variant="customCard"
         maxW={cardWidth}
@@ -73,9 +86,10 @@ const About = () => {
           software universe!
         </Text>
       </Container>
+      {/* //!MORE ABOUT ME */}
       <Container
         id="moreText"
-        maxW="container.lg"
+        maxW="container.md"
         marginTop={20}
         gap={10}
         opacity={moreTextOpacity}
@@ -85,7 +99,7 @@ const About = () => {
           src="images/ProfileImage.jpg"
           alt="Gaetano Celentano"
           float="right"
-          marginTop={5}
+          margin={2.5}
           marginInline={10}
           borderRadius="50%"
           boxSize={{
@@ -110,23 +124,7 @@ const About = () => {
           always aiming for reliable and focused outcomes. Every task I take on
           is a chance to learn, and I approach it with humility. I thrive on
           embracing challenges with an open mind, which makes adapting to
-          different situations a strong suit of mine.
-        </Text>
-      </Container>
-      <Container
-        maxW="container.lg"
-        opacity={moreTextOpacity}
-        transition="opacity 0.05s ease-in"
-      >
-        <Text
-          fontSize={{
-            md: '22px',
-            sm: '18px',
-            base: '14px'
-          }}
-          textAlign="justify"
-          marginInline="auto"
-        >
+          different situations a strong suit of mine. <br />
           Communication and collaboration are key to my playbook &#45; I know
           teamwork is the magic ingredient for success. In the realm of software
           development, I've got some big goals: honing my technical skills,
@@ -135,64 +133,83 @@ const About = () => {
           can grow together while making a real impact in the software world.
         </Text>
       </Container>
+      {/* //!TIMELINE */}
       <Container
         id="bio"
-        maxW="container.lg"
+        maxW="container.md"
         marginTop={20}
         gap={10}
-        opacity={moreTextOpacity}
+        opacity={bioOpacity}
         transition="opacity 0.05s ease-in"
-        fontSize={{
-          md: '18px',
-          sm: '16px',
-          base: '12px'
-        }}
       >
-        <Heading variant="title" maxW="full" textAlign="left">
-          Bio
+        <Heading variant="title" maxW="full" textAlign="left" marginBlock={5}>
+          From Then to Now
         </Heading>
-        <Box
-          display="flex"
-          flexDir="row"
-          alignItems="center"
-          justifyContent="flex-start"
-          gap={4}
-        >
+        <Flex dir="row" gap={4}>
           <Text variant="bioYear">1999</Text>
           <Text> Born in Naples - IT</Text>
-        </Box>
-        <Box
-          display="flex"
-          flexDir="row"
-          alignItems="center"
-          justifyContent="flex-start"
-          gap={4}
-        >
+        </Flex>
+        <Flex dir="row" gap={4}>
           <Text variant="bioYear">2018</Text>
           <Text>High school graduate as a computer technician</Text>
-        </Box>
-        <Box
-          display="flex"
-          flexDir="row"
-          alignItems="center"
-          justifyContent="flex-start"
-          gap={4}
-        >
+        </Flex>
+        <Flex dir="row" gap={4}>
           <Text variant="bioYear">2023</Text>
           <Text>Bachelor degree as IT Engineer</Text>
-        </Box>
-        <Box
-          display="flex"
-          flexDir="row"
-          alignItems="center"
-          justifyContent="flex-start"
-          gap={4}
-        >
+        </Flex>
+        <Flex dir="row" gap={4}>
           <Text variant="bioYear">2022-23</Text>
           <Text>
             Student @ Apple Developer Academy&lt;Unina Federico II&gt;
           </Text>
-        </Box>
+        </Flex>
+      </Container>
+      {/* //! CONTACTS */}
+      <Container
+        opacity={bioOpacity}
+        transition="opacity 0.05s ease-in"
+        variant="customCard"
+        marginTop={20}
+        width={{
+          md: 'xl',
+          base: 'md'
+        }}
+        alignItems="flex-start"
+        justifyContent="flex-start"
+        pt={7}
+        pl={14}
+        pr={14}
+      >
+        <Flex
+          dir="row"
+          justifyContent="space-between"
+          alignItems="flex-start"
+          width="full"
+        >
+          <Heading variant="title" pb={7}>
+            Contacts
+          </Heading>
+          <Icon
+            as={TiContacts}
+            fontSize={{
+              md: 50,
+              base: 25
+            }}
+            color="#ff6e00"
+          />
+        </Flex>
+        <Link variant="contactLink" href="mailto:gaetano99celentano@gmail.com">
+          Email
+        </Link>
+        <Link
+          variant="contactLink"
+          href="https://www.linkedin.com/in/gaetano-celentano/"
+        >
+          LinkedIn
+        </Link>
+        <Link variant="contactLink" href="https://github.com/g-celentano">
+          GitHub
+        </Link>
       </Container>
     </Container>
   )
