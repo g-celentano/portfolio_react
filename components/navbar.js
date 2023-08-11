@@ -1,11 +1,9 @@
 import NextLink from 'next/link'
 import {
-  Container,
   Box,
   Link,
   Stack,
   Heading,
-  Flex,
   Menu,
   MenuItem,
   MenuList,
@@ -53,16 +51,12 @@ const Navbar = props => {
       flexDir="row"
       paddingInline={{
         xl: '48px',
-        lg: '32px',
         md: '32px',
-        sm: '16px',
         base: '16px'
       }}
       paddingBlock={{
         xl: '16px',
-        lg: '12px',
         md: '12px',
-        sm: '8px',
         base: '8px'
       }}
       wrap="wrap"
@@ -72,9 +66,7 @@ const Navbar = props => {
         as="h1"
         fontSize={{
           xl: '36px',
-          lg: '30px',
           md: '30px',
-          sm: '28px',
           base: '28px'
         }}
       >

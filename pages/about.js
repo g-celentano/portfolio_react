@@ -11,6 +11,8 @@ import {
 import AnimatedText from '../components/animated_text.js'
 import { useEffect, useState } from 'react'
 import { TiContacts } from 'react-icons/ti'
+import { TfiEmail } from 'react-icons/tfi'
+import { FaLinkedin, FaGithub } from 'react-icons/fa'
 
 const About = () => {
   const [cardWidth, setCardWidth] = useState({
@@ -142,7 +144,13 @@ const About = () => {
         opacity={bioOpacity}
         transition="opacity 0.05s ease-in"
       >
-        <Heading variant="title" maxW="full" textAlign="left" marginBlock={5}>
+        <Heading
+          size="lg"
+          variant="title"
+          maxW="full"
+          textAlign="left"
+          marginBlock={5}
+        >
           From Then to Now
         </Heading>
         <Flex dir="row" gap={4}>
@@ -186,7 +194,7 @@ const About = () => {
           alignItems="flex-start"
           width="full"
         >
-          <Heading variant="title" pb={7}>
+          <Heading size="lg" variant="title" pb={7}>
             Contacts
           </Heading>
           <Icon
@@ -199,15 +207,36 @@ const About = () => {
           />
         </Flex>
         <Link variant="contactLink" href="mailto:gaetano99celentano@gmail.com">
+          <Icon
+            as={TfiEmail}
+            fontSize={{
+              md: 25,
+              base: 12.5
+            }}
+          />
           Email
         </Link>
         <Link
           variant="contactLink"
           href="https://www.linkedin.com/in/gaetano-celentano/"
         >
+          <Icon
+            as={FaLinkedin}
+            fontSize={{
+              md: 25,
+              base: 12.5
+            }}
+          />
           LinkedIn
         </Link>
         <Link variant="contactLink" href="https://github.com/g-celentano">
+          <Icon
+            as={FaGithub}
+            fontSize={{
+              md: 25,
+              base: 12.5
+            }}
+          />
           GitHub
         </Link>
       </Container>
