@@ -68,10 +68,10 @@ const About = () => {
           transition="max-height 0.2s ease-in, opacity 0.2s ease-in"
           textAlign="justify"
         >
-          Hey there, I'm Gaetano &#45; your friendly neighborhood developer! I
-          love tackling challenges with an open mind and delivering solid
-          results. Let's team up, write some killer code, and make a dent in the
-          software universe!
+          Hey there, I&apos;m Gaetano &#45; your friendly neighborhood
+          developer! I love tackling challenges with an open mind and delivering
+          solid results. Let&apos;s team up, write some killer code, and make a
+          dent in the software universe!
         </Text>
       </Container>
       {/* //!MORE ABOUT ME */}
@@ -108,17 +108,18 @@ const About = () => {
           textAlign="justify"
         >
           Going a bit further...
-          <br /> I'd say I see myself as a dedicated and adaptable person,
+          <br /> I&apos;d say I see myself as a dedicated and adaptable person,
           always aiming for reliable and focused outcomes. Every task I take on
           is a chance to learn, and I approach it with humility. I thrive on
           embracing challenges with an open mind, which makes adapting to
           different situations a strong suit of mine. <br />
           Communication and collaboration are key to my playbook &#45; I know
           teamwork is the magic ingredient for success. In the realm of software
-          development, I've got some big goals: honing my technical skills,
+          development, I&apos;ve got some big goals: honing my technical skills,
           riding the wave of industry trends, and dreaming up innovative
-          solutions. I'm all about that collaborative team environment, where we
-          can grow together while making a real impact in the software world.
+          solutions. I&apos;m all about that collaborative team environment,
+          where we can grow together while making a real impact in the software
+          world.
         </Text>
       </Container>
       {/* //!TIMELINE */}
