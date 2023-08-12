@@ -2,6 +2,7 @@
   "name": "portfolio_react",
   "version": "1.0.0",
   "description": "Gaetano's Portfolio",
+  "homepage": "https://g-celentano.github.io/",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
