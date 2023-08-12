@@ -46,6 +46,7 @@ const WorkTitle = ({ projectName, projectImage, icon }) => {
       {icon === false ? (
         <Image
           src={imageName}
+          alt={projectName}
           boxSize={{
             md: '75px',
             base: '50px'
@@ -124,14 +125,15 @@ const Works = () => {
         icon={true}
       >
         <Text textAlign="justify" textIndent="5%" px="5%">
-          This is the portfolio I made in order to showcase the work I've be
-          doing over the years. I wanted to make this, other than the showcase
-          itself, to learn ReactJS, and how to build a proper website with it.
+          This is the portfolio I made in order to showcase the work I&apos;ve
+          be doing over the years. I wanted to make this, other than the
+          showcase itself, to learn ReactJS, and how to build a proper website
+          with it.
           <br />I also used the opportunity to try my hand a little at design,
           which I usually leave to those in charge. <br />
-          As for the interface, it was done using the "Chakra UI" library, and
-          as cheat sheet for the usage of the library, I followed and took a few
-          lines of code from&nbsp;
+          As for the interface, it was done using the &quot;Chakra UI&qout;
+          library, and as cheat sheet for the usage of the library, I followed
+          and took a few lines of code from&nbsp;
           <Link
             href="https://www.craftz.dog/"
             textDecor="underline"
@@ -141,7 +143,7 @@ const Works = () => {
             }}
             maxW="min-content"
           >
-            Takuya Matsuyama's site&nbsp;
+            Takuya Matsuyama&apos;s site&nbsp;
             <Icon as={FiExternalLink} verticalAlign="baseline" />
           </Link>
         </Text>
@@ -175,7 +177,7 @@ const Works = () => {
           NLP process (because of the absence of the required APIs) that should
           be the responsible for the semantic analysis, helpful for
           understanding at the best the user game requests. <br />
-          <br /> Obviously I didn't do all the work, I worked with other 4
+          <br /> Obviously I didn&apos;t do all the work, I worked with other 4
           people: 2 designers, one business oriented person, and another coder.
           What I did in this project, essentially, is: <br /> I mostly curated
           the NN for the messages recognition, and, with the help of the
@@ -192,13 +194,13 @@ const Works = () => {
         <Text textAlign="justify" textIndent="5%" px="5%">
           This is the project I made to participate, and also be one of the
           winners of <i>Swift Student Challenge 2023</i>, that basically
-          explains a math problem: The Buffon's needles problem. <br />
+          explains a math problem: The Buffon&apos;s needles problem. <br />
           <br />
           This problem is essentially a problem that Buffon, a French
           mathematician of the 1700s, solved. He noticed that dividing a surface
           in equal sections, and let an indefinite number of needles drop on
           this surface, the probability for the needles to land of the dividers,
-          after a long series of calculation, is related to the number Pi.{' '}
+          after a long series of calculation, is related to the number Pi.
           <br /> So actually, if you reverse the formula, and approximate the
           probability for the needles to land on the surface dividers as the
           numbers of needles actually landed on the dividers over the total
@@ -215,14 +217,14 @@ const Works = () => {
         <Text textAlign="justify" textIndent="5%" px="5%">
           <b>Sortify</b> is an application, made during the Apple Acadamey, that
           was meant as project to showcase how muchI understood about sorting
-          alghoritms (given that I chose to work with 'Algorithms and Data
-          Structures'). <br />
+          alghoritms (given that I chose to work with &apos;Algorithms and Data
+          Structures&apos;). <br />
           <br />
-          It was a 'one-week' project, so the algorithms present in the app are
-          just the simpler ones. Anyway, I made everything present in the app,
-          based on the fact that this is a simple application to understand how
-          some of the known sorting algorithms work, with a simple explanation
-          and a little animation to show how it's done.
+          It was a &apos;one-week&apos; project, so the algorithms present in
+          the app are just the simpler ones. Anyway, I made everything present
+          in the app, based on the fact that this is a simple application to
+          understand how some of the known sorting algorithms work, with a
+          simple explanation and a little animation to show how it&apos;s done.
           <br /> A more in-depth explanation is available in the Github Repo.
         </Text>
       </WorkListElement>

@@ -1,4 +1,4 @@
-import { Box, Container, Link, grid } from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react'
 import About from './about.js'
 
 const Page = () => {
