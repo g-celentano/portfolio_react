@@ -81,10 +81,10 @@ const Navbar = props => {
         marginRight={2}
         marginLeft={5}
       >
-        <LinkItem href="portfolio_react/" path={path}>
+        <LinkItem href="/" path={path}>
           About
         </LinkItem>
-        <LinkItem href="portfolio_react/works" path={path}>
+        <LinkItem href="/works" path={path}>
           Works
         </LinkItem>
       </Stack>
@@ -108,10 +108,10 @@ const Navbar = props => {
               }}
             />
             <MenuList>
-              <Link as={NextLink} href="portfolio_react/" passHref>
+              <Link as={NextLink} href="/" passHref>
                 <MenuItem>About</MenuItem>
               </Link>
-              <Link as={NextLink} href="portfolio_react/works" passHref>
+              <Link as={NextLink} href="/works" passHref>
                 <MenuItem>Works</MenuItem>
               </Link>
             </MenuList>
