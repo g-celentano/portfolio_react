@@ -116,7 +116,7 @@ const Works = () => {
       <WorkListElement
         projectImage={CgWebsite}
         projectName="This Portfolio"
-        link="https://github.com/g-celentano/portfolio_react"
+        link="https://github.com/g-celentano/g-celentano.github.io"
         icon={true}
       >
         This is the portfolio I made in order to showcase the work I've be doing
