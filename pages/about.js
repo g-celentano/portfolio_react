@@ -15,11 +15,6 @@ import { TfiEmail } from 'react-icons/tfi'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 
 const About = () => {
-  const [cardWidth, setCardWidth] = useState({
-    md: 'xl',
-    base: 'md'
-  })
-  const [cardTextHeight, setCardTextHeight] = useState(0)
   const [cardTextOpacity, setCardTextOpacity] = useState(0)
   const [moreTextOpacity, setMoreTextOpacity] = useState(0.0)
   const [bioOpacity, setBioOpacity] = useState(0.0)
@@ -42,22 +37,11 @@ const About = () => {
   }
 
   useEffect(() => {
-    setTimeout(() => {
-      setCardWidth({
-        md: 'container.md',
-        base: 'container.sm'
-      })
-    }, 2400)
-    setTimeout(() => {
-      setCardTextHeight(1000)
-      setTimeout(() => {
-        setCardTextOpacity(1)
-        setMoreTextOpacity(0.2)
-        setBioOpacity(0.2)
-        window.addEventListener('scroll', listenToScroll)
-        return () => window.removeEventListener('scroll', listenToScroll)
-      }, 200)
-    }, 2700)
+    setCardTextOpacity(1)
+    setMoreTextOpacity(0.2)
+    setBioOpacity(0.2)
+    window.addEventListener('scroll', listenToScroll)
+    return () => window.removeEventListener('scroll', listenToScroll)
   }, [])
 
   return (
@@ -65,7 +49,10 @@ const About = () => {
       {/* //!WELCOME CONTAINER */}
       <Container
         variant="customCard"
-        maxW={cardWidth}
+        maxW={{
+          md: 'container.md',
+          base: 'container.sm'
+        }}
         padding={10}
         marginTop={50}
       >
@@ -76,7 +63,6 @@ const About = () => {
             sm: '18px',
             base: '14px'
           }}
-          maxH={cardTextHeight}
           opacity={cardTextOpacity}
           overflow="hidden"
           transition="max-height 0.2s ease-in, opacity 0.2s ease-in"
