@@ -131,7 +131,7 @@ const Works = () => {
           with it.
           <br />I also used the opportunity to try my hand a little at design,
           which I usually leave to those in charge. <br />
-          As for the interface, it was done using the &quot;Chakra UI&qout;
+          As for the interface, it was done using the &quot;Chakra UI&quot;
           library, and as cheat sheet for the usage of the library, I followed
           and took a few lines of code from&nbsp;
           <Link
