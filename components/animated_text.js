@@ -10,6 +10,10 @@ const AnimatedText = () => {
         base: '22px'
       }}
       fontWeight="bold"
+      maxH={{
+        md: '4rem',
+        base: '2rem'
+      }}
     >
       <Typewriter
         options={{

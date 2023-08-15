@@ -88,9 +88,12 @@ const About = () => {
         opacity={moreTextOpacity}
         transition="opacity 0.05s ease-in"
       >
-        <Image
-          src="images/ProfileImage.jpg"
-          alt="Gaetano Celentano"
+        <Container
+          pointerEvents="none"
+          backgroundImage="images/ProfileImage.jpg"
+          backgroundPosition="center"
+          backgroundRepeat={1}
+          backgroundSize="contain"
           float="right"
           margin={2.5}
           marginInline={10}
@@ -175,9 +178,8 @@ const About = () => {
         }}
         alignItems="flex-start"
         justifyContent="flex-start"
-        pt={7}
-        pl={14}
-        pr={14}
+        py={7}
+        px={14}
       >
         <Flex
           dir="row"
