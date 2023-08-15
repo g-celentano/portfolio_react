@@ -1,6 +1,5 @@
 import {
   Container,
-  Image,
   Text,
   useColorModeValue,
   Heading,
