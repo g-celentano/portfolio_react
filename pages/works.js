@@ -120,7 +120,9 @@ const Works = () => {
   return (
     <Container
       variant="customCard"
-      maxW="container.lg"
+      maxW={{
+        md: 'container.lg'
+      }}
       mt="3rem"
       maxH="max-content"
     >
