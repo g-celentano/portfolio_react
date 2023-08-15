@@ -40,8 +40,8 @@ const Navbar = props => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue('#E6EAF266', '#0E263666')}
-      style={{ backdropFilter: 'blur(10px)' }}
+      bg={useColorModeValue('#E6EAF244', '#0E263644')}
+      backdropFilter="blur(10px)"
       zIndex={1}
       {...props}
       display="flex"
