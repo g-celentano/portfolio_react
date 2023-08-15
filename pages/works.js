@@ -89,6 +89,7 @@ const WorkListElement = ({
       justifyContent="flex-start"
       my={10}
       gap={5}
+      flex={1}
     >
       <Flex
         flexDir={{
@@ -117,7 +118,12 @@ const WorkListElement = ({
 
 const Works = () => {
   return (
-    <Container variant="customCard" maxW="container.lg">
+    <Container
+      variant="customCard"
+      maxW="container.lg"
+      mt="3rem"
+      maxH="max-content"
+    >
       <WorkListElement
         projectImage={CgWebsite}
         projectName="This Portfolio"

@@ -6,10 +6,8 @@ const AnimatedText = () => {
     <Box
       fontFamily="'JetBrains Mono', monospace"
       fontSize={{
-        xl: '28px',
         md: '24px',
-        sm: '20px',
-        base: '16px'
+        base: '22px'
       }}
       fontWeight="bold"
     >

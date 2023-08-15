@@ -37,11 +37,17 @@ const About = () => {
   }
 
   useEffect(() => {
-    setCardTextOpacity(1)
-    setMoreTextOpacity(0.2)
-    setBioOpacity(0.2)
-    window.addEventListener('scroll', listenToScroll)
-    return () => window.removeEventListener('scroll', listenToScroll)
+    if (!window.matchMedia('(max-width: 30em)')) {
+      setCardTextOpacity(1)
+      setMoreTextOpacity(0.2)
+      setBioOpacity(0.2)
+      window.addEventListener('scroll', listenToScroll)
+      return () => window.removeEventListener('scroll', listenToScroll)
+    } else {
+      setCardTextOpacity(1)
+      setMoreTextOpacity(1)
+      setBioOpacity(1)
+    }
   }, [])
 
   return (
@@ -58,15 +64,14 @@ const About = () => {
       >
         <AnimatedText />
         <Text
-          fontSize={{
-            md: '22px',
-            sm: '18px',
-            base: '14px'
-          }}
           opacity={cardTextOpacity}
           overflow="hidden"
           transition="max-height 0.2s ease-in, opacity 0.2s ease-in"
           textAlign="justify"
+          fontSize={{
+            md: 22.5,
+            base: 20
+          }}
         >
           Hey there, I&apos;m Gaetano &#45; your friendly neighborhood
           developer! I love tackling challenges with an open mind and delivering
@@ -100,12 +105,11 @@ const About = () => {
           )}
         />
         <Text
-          fontSize={{
-            md: '22px',
-            sm: '18px',
-            base: '14px'
-          }}
           textAlign="justify"
+          fontSize={{
+            md: 25,
+            base: 22
+          }}
         >
           Going a bit further...
           <br /> I&apos;d say I see myself as a dedicated and adaptable person,
@@ -140,21 +144,21 @@ const About = () => {
         >
           From Then to Now
         </Heading>
-        <Flex dir="row" gap={4}>
+        <Flex dir="row" gap="1em">
           <Text variant="bioYear">1999</Text>
-          <Text> Born in Naples - IT</Text>
+          <Text flex={1}> Born in Naples - IT</Text>
         </Flex>
-        <Flex dir="row" gap={4}>
+        <Flex dir="row" gap="1em">
           <Text variant="bioYear">2018</Text>
-          <Text>High school graduate as a computer technician</Text>
+          <Text flex={1}>High school graduate as a computer technician</Text>
         </Flex>
-        <Flex dir="row" gap={4}>
+        <Flex dir="row" gap="1em">
           <Text variant="bioYear">2023</Text>
-          <Text>Bachelor degree as IT Engineer</Text>
+          <Text flex={1}>Bachelor degree as IT Engineer</Text>
         </Flex>
-        <Flex dir="row" gap={4}>
+        <Flex dir="row" gap="1em">
           <Text variant="bioYear">2022-23</Text>
-          <Text>
+          <Text flex={1}>
             Student @ Apple Developer Academy&lt;Unina Federico II&gt;
           </Text>
         </Flex>
@@ -198,7 +202,7 @@ const About = () => {
             as={TfiEmail}
             fontSize={{
               md: 25,
-              base: 12.5
+              base: 22
             }}
           />
           Email
@@ -211,7 +215,7 @@ const About = () => {
             as={FaLinkedin}
             fontSize={{
               md: 25,
-              base: 12.5
+              base: 22
             }}
           />
           LinkedIn
@@ -221,7 +225,7 @@ const About = () => {
             as={FaGithub}
             fontSize={{
               md: 25,
-              base: 12.5
+              base: 22
             }}
           />
           GitHub
