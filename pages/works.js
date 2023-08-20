@@ -219,7 +219,7 @@ const Works = () => {
       <WorkListElement
         projectImage="Sortify.png"
         projectName="Sortify"
-        link="https://github.com/g-celentano/Buffons-Needle-Problem"
+        link="https://github.com/g-celentano/Sortify"
         icon={false}
       >
         <Text textAlign="justify" textIndent="5%" px="5%">
