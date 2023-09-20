@@ -60,6 +60,7 @@ const WorkTitle = ({ projectName, projectImage, icon }) => {
             md: '75px',
             base: '50px'
           }}
+          color="#ff6e00"
         />
       )}
       <Heading
@@ -68,6 +69,7 @@ const WorkTitle = ({ projectName, projectImage, icon }) => {
           base: 'lg'
         }}
         variant="workTitle"
+        color="#ff6e00"
       >
         {projectName}
       </Heading>
@@ -231,6 +233,23 @@ const Works = () => {
             </Text>
           </ListItem>
         </List>
+      </WorkListElement>
+      <WorkListElement
+        projectImage="AnimatedIcons.png"
+        projectName="SwiftUI Animated Icons"
+        link="https://github.com/g-celentano/SwiftUIAnimatedIcons"
+        icon={false}
+      >
+        <Text textAlign="justify" textIndent="5%" px="5%">
+          This is essentially a <b>Swift(UI) Package</b> for using animated
+          icons without the <i>"""stress"""</i> of having to handle the state of
+          every animated icon.
+          <br />
+          I wanted to try to write a library, and I did it in SwiftUI because
+          it's a language I'm comfortable with.
+          <br />
+          The <b>list of supported icons</b> can be found at the GitHub repo
+        </Text>
       </WorkListElement>
     </Container>
   )
