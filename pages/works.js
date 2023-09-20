@@ -242,11 +242,11 @@ const Works = () => {
       >
         <Text textAlign="justify" textIndent="5%" px="5%">
           This is essentially a <b>Swift(UI) Package</b> for using animated
-          icons without the <i>"""stress"""</i> of having to handle the state of
-          every animated icon.
+          icons without the <i>&quot;&quot;&quot;stress&quot;&quot;&quot;</i> of
+          having to handle the state of every animated icon.
           <br />
           I wanted to try to write a library, and I did it in SwiftUI because
-          it's a language I'm comfortable with.
+          its a language I&apos;m comfortable with.
           <br />
           The <b>list of supported icons</b> can be found at the GitHub repo
         </Text>
