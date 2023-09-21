@@ -246,7 +246,7 @@ const Works = () => {
           having to handle the state of every animated icon.
           <br />
           I wanted to try to write a library, and I did it in SwiftUI because
-          its a language I&apos;m comfortable with.
+          it&apos;s a language I&apos;m comfortable with.
           <br />
           The <b>list of supported icons</b> can be found at the GitHub repo
         </Text>
