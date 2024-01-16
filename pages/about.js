@@ -146,27 +146,72 @@ const About = () => {
         >
           From Then to Now
         </Heading>
-        <Flex dir="row" gap="1em">
+        <Flex
+          dir="row"
+          gap="1em"
+          alignItems="center"
+          height={{
+            md: '40px',
+            base: '30px'
+          }}
+        >
           <Text variant="bioYear">1999</Text>
-          <Text flex={1}> Born in Naples - IT</Text>
+          <Text flex={1} lineHeight={1}>
+            {' '}
+            Born in Naples - IT
+          </Text>
         </Flex>
-        <Flex dir="row" gap="1em">
+        <Flex
+          dir="row"
+          gap="1em"
+          alignItems="center"
+          height={{
+            md: '40px',
+            base: '30px'
+          }}
+        >
           <Text variant="bioYear">2018</Text>
-          <Text flex={1}>High school graduate as a computer technician</Text>
+          <Text variant="bioInfo">
+            High school graduate as a computer technician
+          </Text>
         </Flex>
-        <Flex dir="row" gap="1em">
+        <Flex
+          dir="row"
+          gap="1em"
+          alignItems="center"
+          height={{
+            md: '40px',
+            base: '30px'
+          }}
+        >
           <Text variant="bioYear">2023</Text>
-          <Text flex={1}>Bachelor degree as IT Engineer</Text>
+          <Text variant="bioInfo">Bachelor degree as IT Engineer</Text>
         </Flex>
-        <Flex dir="row" gap="1em">
+        <Flex
+          dir="row"
+          gap="1em"
+          alignItems="center"
+          height={{
+            md: '40px',
+            base: '30px'
+          }}
+        >
           <Text variant="bioYear">2022-23</Text>
-          <Text flex={1}>
+          <Text variant="bioInfo">
             Student @ Apple Developer Academy&lt;Unina Federico II&gt;
           </Text>
         </Flex>
-        <Flex dir="row" gap="1em">
-          <Text variant="bioYear">2023-Present</Text>
-          <Text flex={1}>
+        <Flex
+          dir="row"
+          gap="1em"
+          alignItems="center"
+          height={{
+            md: '40px',
+            base: '30px'
+          }}
+        >
+          <Text variant="bioYear">2023-</Text>
+          <Text variant="bioInfo">
             IT Engineering Master&apos;s Degree Student @ Unina Federico II
           </Text>
         </Flex>
