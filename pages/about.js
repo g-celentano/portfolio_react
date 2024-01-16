@@ -167,7 +167,7 @@ const About = () => {
         <Flex dir="row" gap="1em">
           <Text variant="bioYear">2023-Present</Text>
           <Text flex={1}>
-            IT Engineering Master's Degree Student @ Unina Federico II
+            IT Engineering Master&apos;s Degree Student @ Unina Federico II
           </Text>
         </Flex>
       </Container>
